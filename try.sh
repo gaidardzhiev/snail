@@ -148,6 +148,6 @@ test_purediag() {
 	}
 }
 
-{ test_ackermann && test_increment && test_core_lang && test_turing && test_hof && test_recursion && test_demorgan && test_truth && test_entscheidungs && test_halting && test_purediag; return="${?}"; } || exit 1
+{ test_ackermann && test_increment && test_core_lang && test_turing && test_hof && test_recursion && test_demorgan && test_truth && test_entscheidungs && test_halting && test_purediag; ret="${?}"; } || exit 1
 
-[ "${return}" -eq 0 ] 2>/dev/null || printf "%s\n" "${return}"
+[ "${ret}" -eq 0 ] 2>/dev/null || printf "%s\n" "${ret}"
