@@ -4,6 +4,8 @@ Snail is a minimalist, interpreted programming language that features a lexical 
 
 Designed to be simple yet powerful, Snail supports higher order functions, closures, conditionals, and looping constructs. Through examples such as the factorial function, the deeply recursive Ackermann function, and advanced recursion patterns, Snail demonstrates its ability to express any computable function and is therefore **Turing complete**.
 
+The interpreter runs at snail speed, but at least it leaves a slimy trace of logic behind.
+
 
 ## Features
 
