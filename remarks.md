@@ -1,6 +1,6 @@
 # SNAIL
 
-Snail is a minimalist, interpreted programming language that  features a lexical analyzer, parser, environment management, and an interpreter capable of evaluating expressions and statements including control flow, functions, and recursion.
+Snail is a minimalist, interpreted programming language that features a lexical analyzer, parser, environment management, and an interpreter capable of evaluating expressions and statements including control flow, functions, and recursion.
 
 Designed to be simple yet powerful, Snail supports higher order functions, closures, conditionals, and looping constructs. Through examples such as the factorial function, the deeply recursive Ackermann function, and advanced recursion patterns, Snail demonstrates its ability to express any computable function and is therefore **Turing complete**.
 
