@@ -207,17 +207,17 @@ ${PROG}: ${PROG}.c
 #
 # XXX - If you have a try.sh script, then please remove this try rule from your Makefile
 #
-try: ${PROG} ${DATA}
-	@# XXX - change this next line as needed
-	./${PROG} XXX some arguments XXX
+#try: ${PROG} ${DATA}
+#	@# XXX - change this next line as needed
+#	./${PROG} XXX some arguments XXX
 
 # alternative executable
 #
-alt: data ${ALT_TARGET}
-	@${TRUE}
+#alt: data ${ALT_TARGET}
+#	@${TRUE}
 
-${PROG}.alt: ${PROG}.alt.c
-	${CC} ${CFLAGS} ${PROG}.alt.c -o $@ ${LDFLAGS}
+#${PROG}.alt: ${PROG}.alt.c
+#	${CC} ${CFLAGS} ${PROG}.alt.c -o $@ ${LDFLAGS}
 
 # suggested way(s) to run alt code, if you include a prog.alt.c
 #
@@ -227,19 +227,19 @@ ${PROG}.alt: ${PROG}.alt.c
 #
 # XXX - If you do NOT have a prog.alt.c, then please remove this try.alt rule from your Makefile
 #
-try.alt: ${PROG}.alt ${DATA}
-	@# XXX - change this next line as needed
-	./${PROG}.alt XXX some arguments XXX
+#try.alt: ${PROG}.alt ${DATA}
+#	@# XXX - change this next line as needed
+#	./${PROG}.alt XXX some arguments XXX
 
 # data files
 #
-data: ${DATA}
+#data: ${DATA}
 	@${TRUE}
 
 # both all and alt
 #
-everything: all alt
-	@${TRUE}
+#everything: all alt
+#	@${TRUE}
 
 
 ###############
