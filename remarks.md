@@ -151,7 +151,7 @@ while (!done) {
 - Shows language handles boolean variables and `while` loops effectively.
 
 
-### Higher Order Functions and Closures (`scripts/higher_order_functions_and_closures.snl`)
+### Higher Order Functions and Closures (`scripts/hofac.snl`)
 ```
 var apply = func(f, x) => {
     f(x);

@@ -60,7 +60,7 @@ test_turing() {
 }
 
 test_hof() {
-	captured=$(./prog scripts/higher_order_functions_and_closures.snl)
+	captured=$(./prog scripts/hofac.snl)
 	expected="25"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Higher Order" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
