@@ -35,7 +35,7 @@ The language supports:
 
 ## Core Language Features
 
-### Arithmetic, Variables, and Conditionals (`scripts/core_language_test.snl`)
+### Arithmetic, Variables, and Conditionals (`core_language_test.snl`)
 ```
 {
     var a = 10;
@@ -87,7 +87,7 @@ The language supports:
 - Boolean logic operations.
 
 
-### Simple Recursion (`scripts/turing.snl`)
+### Simple Recursion (`turing.snl`)
 ```
 var factorial = func(n) => {
     if (n == 0) {
@@ -104,7 +104,7 @@ outn(result);
 - Computes factorial demonstrating non trivial mathematical functions.
 
 
-### Anonymous Functions (`scripts/anon_func.snl`)
+### Anonymous Functions (`anon_func.snl`)
 ```
 var increment = func(x) => { x + 1; };
 outn(increment(7));
@@ -113,7 +113,7 @@ outn(increment(7));
 - Direct application of function values.
 
 
-### Advanced Recursion: Ackermann Function (`scripts/ackermann.snl`)
+### Advanced Recursion: Ackermann Function (`ackermann.snl`)
 ```
 var ackermann = func(m, n) => {
     if (m == 0) {
@@ -135,7 +135,7 @@ outn(result);
 - Running this successfully shows the language supports computations beyond simple loops.
 
 
-### Loop Control without break (`scripts/unbounded_loop.snl`)
+### Loop Control without break (`unbounded_loop.snl`)
 ```
 var i = 0;
 var done = false;
@@ -151,7 +151,7 @@ while (!done) {
 - Shows language handles boolean variables and `while` loops effectively.
 
 
-### Higher Order Functions and Closures (`scripts/hofac.snl`)
+### Higher Order Functions and Closures (`hofac.snl`)
 ```
 var apply = func(f, x) => {
     f(x);
@@ -167,7 +167,7 @@ outn(apply(square, 5));
 - Demonstrates passing functions as arguments and returning values.
 
 
-### Tail Recursive Function (`scripts/recursion.snl`)
+### Tail Recursive Function (`recursion.snl`)
 ```
 var fact = func(n, acc) => {
     if (n == 0) {
@@ -183,7 +183,7 @@ outn(fact(5, 1));
 - Demonstrates ability to write efficient recursive code patterns.
 
 
-### Truth Tables (`scripts/truth_table_testing.snl`)
+### Truth Tables (`truth_table_testing.snl`)
 ```
 var not = func(b) => {
         if (b) { false; } else { true; }
@@ -218,7 +218,7 @@ truth_table(de_morgan_1);
 - Tests De Morgan's Law, outputting `true` or `false` for each case.
 
 
-### De Morgan's Law (`scripts/demorgan_law.snl`)
+### De Morgan's Law (`demorgan_law.snl`)
 ```
 var not = func(b) => {
     if (b) { false; } else { true; }
@@ -242,7 +242,7 @@ outn(de_morgan_1(false, false));
 - Demonstrates the fundamental logic identity holds for every input.
 
 
-### Halting Paradox (`scripts/halting_paradox.snl`)
+### Halting Paradox (`halting_paradox.snl`)
 ```
 var halts = func(prog, input) => {
     false;
@@ -270,7 +270,7 @@ outn(result);
 - Outputs `0`, illustrating the contradiction proving halting problem undecidable.
 
 
-### Halting Problem Diagonalization (`scripts/pure_diag.snl`)
+### Halting Problem Diagonalization (`pure_diag.snl`)
 
 ```
 var loops = func(f) => {
@@ -309,9 +309,9 @@ By these properties alone, it meets the minimal criteria to be Turing complete.
 
 Furthermore, the implementation of:
 
-- The **factorial function** (`scripts/turing.snl`),
-- The **Ackermann function** (`scripts/ackermann.snl`), and
-- Tail recursion with accumulators (`scripts/recursion.snl`),
+- The **factorial function** (`turing.snl`),
+- The **Ackermann function** (`ackermann.snl`), and
+- Tail recursion with accumulators (`recursion.snl`),
 
 demonstrate the ability to compute any computable function given enough memory and time.
 

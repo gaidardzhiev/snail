@@ -11,7 +11,7 @@ fprint() {
 }
 
 test_ackermann() {
-	captured=$(./prog scripts/ackermann.snl)
+	captured=$(./prog ackermann.snl)
 	expected="1021"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Ackermann(3,7)" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
@@ -23,7 +23,7 @@ test_ackermann() {
 }
 
 test_increment() {
-	captured=$(./prog scripts/anon_func.snl)
+	captured=$(./prog anon_func.snl)
 	expected="8"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Increment" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
@@ -37,7 +37,7 @@ test_increment() {
 test_core_lang() {
 	expected="20\n1\n0\n1\n2\n3\n4\n20\n15\n42"
 	expected=$(printf '%b' "${expected}")
-	captured=$(./prog scripts/core_language_test.snl)
+	captured=$(./prog core_language_test.snl)
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Core Language" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
 		return 0;
@@ -48,7 +48,7 @@ test_core_lang() {
 }
 
 test_turing() {
-	captured=$(./prog scripts/turing.snl)
+	captured=$(./prog turing.snl)
 	expected="120"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Turing Completeness" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
@@ -60,7 +60,7 @@ test_turing() {
 }
 
 test_hof() {
-	captured=$(./prog scripts/hofac.snl)
+	captured=$(./prog hofac.snl)
 	expected="25"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Higher Order" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
@@ -72,7 +72,7 @@ test_hof() {
 }
 
 test_recursion() {
-	captured=$(./prog scripts/recursion.snl)
+	captured=$(./prog recursion.snl)
 	expected="120"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Recursion" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
@@ -86,7 +86,7 @@ test_recursion() {
 test_demorgan() {
 	expected="true\ntrue\ntrue\ntrue\n"
 	expected=$(printf %b "${expected}")
-	captured=$(./prog scripts/demorgan_law.snl)
+	captured=$(./prog demorgan_law.snl)
 	[ "${captured}" = "${expected}" ] && {
 		fprint "DeMorgan" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
 		return 0;
@@ -99,7 +99,7 @@ test_demorgan() {
 test_truth() {
 	expected="true\ntrue\ntrue\ntrue\n"
 	expected=$(printf %b "${expected}")
-	captured=$(./prog scripts/truth_table_testing.snl)
+	captured=$(./prog truth_table_testing.snl)
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Truth Table" "${expected}" "${captured}" "\n${G}PASSED${N}\n";
 		return 0;
@@ -110,7 +110,7 @@ test_truth() {
 }
 
 test_entscheidungs() {
-	captured=$(./prog scripts/entscheidungs_problem.snl)
+	captured=$(./prog entscheidungs_problem.snl)
 	expected="0"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "EntscheidungsProblem" "${expected}" "${captured}" "\n${G}CONFIRMED${N}\n";
@@ -122,7 +122,7 @@ test_entscheidungs() {
 }
 
 test_halting() {
-	captured=$(./prog scripts/halting_paradox.snl)
+	captured=$(./prog halting_paradox.snl)
 	expected="0"
 	[ "${captured}" = "${expected}" ] && {
 		fprint "Halting Paradox" "${expected}" "${captured}" "\n${G}CONFIRMED${N}\n";
@@ -135,7 +135,7 @@ test_halting() {
 
 test_purediag() {
 	exec 3>&2 2>/dev/null
-	./prog scripts/pure_diag.snl
+	./prog pure_diag.snl
 	captured="${?}"
 	expected="139"
 	exec 2>&3 3>&-
