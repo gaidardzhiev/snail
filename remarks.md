@@ -26,7 +26,7 @@ The language supports:
 
 - Variable declarations with `var` and `const`.
 - Arithmetic operators (`+`, `-`, `*`, `/`, `%`).
-- Comparison and equality operators (`<`, `<=`, `>`, `>=`, `==`, `!=`).
+- Comparison and equality operators (`<`, `>`, `==`,).
 - Logical operators (`&&`, `||`, `!`).
 - Function declarations via `func(params) => expression`.
 - Control structures: `if`, `elif`, `else`, `while`.
