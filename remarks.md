@@ -35,7 +35,7 @@ The language supports:
 
 #### Core Language Features
 
-###### Arithmetic, Variables, and Conditionals (`core_language_test.snl`)
+##### Arithmetic, Variables, and Conditionals (`core_language_test.snl`)
 ```
 {
     var a = 10;
