@@ -1,4 +1,4 @@
-# SNAIL
+### SNAIL
 
 Snail is a minimalist, interpreted programming language that features a lexical analyzer, parser, environment management, and an interpreter capable of evaluating expressions and statements including control flow, functions, and recursion.
 
@@ -7,7 +7,7 @@ Designed to be simple yet powerful, Snail supports higher order functions, closu
 The interpreter runs at snail speed, but at least it leaves a slimy trace of logic behind.
 
 
-## Features
+#### Features
 
 - Lexical tokenizer supporting keywords, identifiers, literals, operators, and symbols.
 - Recursive descent parser producing an Abstract Syntax Tree (AST).
@@ -20,7 +20,7 @@ The interpreter runs at snail speed, but at least it leaves a slimy trace of log
 - Interpreter that evaluates the AST directly.
 
 
-## Language Overview
+#### Language Overview
 
 The language supports:
 
@@ -33,9 +33,9 @@ The language supports:
 - Statements end with semicolons `;`.
 - Output via `outn(expression);`.
 
-## Core Language Features
+#### Core Language Features
 
-### Arithmetic, Variables, and Conditionals (`core_language_test.snl`)
+###### Arithmetic, Variables, and Conditionals (`core_language_test.snl`)
 ```
 {
     var a = 10;
@@ -87,7 +87,7 @@ The language supports:
 - Boolean logic operations.
 
 
-### Simple Recursion (`turing.snl`)
+##### Simple Recursion (`turing.snl`)
 ```
 var factorial = func(n) => {
     if (n == 0) {
@@ -104,7 +104,7 @@ outn(result);
 - Computes factorial demonstrating non trivial mathematical functions.
 
 
-### Anonymous Functions (`anon_func.snl`)
+##### Anonymous Functions (`anon_func.snl`)
 ```
 var increment = func(x) => { x + 1; };
 outn(increment(7));
@@ -113,7 +113,7 @@ outn(increment(7));
 - Direct application of function values.
 
 
-### Advanced Recursion: Ackermann Function (`ackermann.snl`)
+##### Advanced Recursion: Ackermann Function (`ackermann.snl`)
 ```
 var ackermann = func(m, n) => {
     if (m == 0) {
@@ -135,7 +135,7 @@ outn(result);
 - Running this successfully shows the language supports computations beyond simple loops.
 
 
-### Loop Control without break (`unbounded_loop.snl`)
+##### Loop Control without break (`unbounded_loop.snl`)
 ```
 var i = 0;
 var done = false;
@@ -151,7 +151,7 @@ while (!done) {
 - Shows language handles boolean variables and `while` loops effectively.
 
 
-### Higher Order Functions and Closures (`hofac.snl`)
+##### Higher Order Functions and Closures (`hofac.snl`)
 ```
 var apply = func(f, x) => {
     f(x);
@@ -167,7 +167,7 @@ outn(apply(square, 5));
 - Demonstrates passing functions as arguments and returning values.
 
 
-### Tail Recursive Function (`recursion.snl`)
+##### Tail Recursive Function (`recursion.snl`)
 ```
 var fact = func(n, acc) => {
     if (n == 0) {
@@ -183,7 +183,7 @@ outn(fact(5, 1));
 - Demonstrates ability to write efficient recursive code patterns.
 
 
-### Truth Tables (`truth_table_testing.snl`)
+##### Truth Tables (`truth_table_testing.snl`)
 ```
 var not = func(b) => {
         if (b) { false; } else { true; }
@@ -218,7 +218,7 @@ truth_table(de_morgan_1);
 - Tests De Morgan's Law, outputting `true` or `false` for each case.
 
 
-### De Morgan's Law (`demorgan_law.snl`)
+##### De Morgan's Law (`demorgan_law.snl`)
 ```
 var not = func(b) => {
     if (b) { false; } else { true; }
@@ -242,7 +242,7 @@ outn(de_morgan_1(false, false));
 - Demonstrates the fundamental logic identity holds for every input.
 
 
-### Halting Paradox (`halting_paradox.snl`)
+##### Halting Paradox (`halting_paradox.snl`)
 ```
 var halts = func(prog, input) => {
     false;
@@ -270,7 +270,7 @@ outn(result);
 - Outputs `0`, illustrating the contradiction proving halting problem undecidable.
 
 
-### Halting Problem Diagonalization (`pure_diag.snl`)
+##### Halting Problem Diagonalization (`pure_diag.snl`)
 
 ```
 var loops = func(f) => {
@@ -296,7 +296,7 @@ The contradiction forces infinite recursion, exhausting the call stack until the
 **Significance**: Confirms the language can express self referential constructions that prove fundamental computability limits.
 
 
-## Proof of Turing Completeness
+#### Proof of Turing Completeness
 
 Snail language supports:
 
@@ -318,10 +318,10 @@ demonstrate the ability to compute any computable function given enough memory a
 These scripts prove Snail can simulate the core logic patterns of a Turing machine, thereby being **Turing complete**.
 
 
-## Obfuscation techniques
+#### Obfuscation techniques
 
 This entry compresses a full recursive descent parser, AST builder, lexical analyzer with hashed keywords, nested environment scopes, and expression evaluator using layered macro indirection, self referential data encoding, polymorphic operator dispatch, and runtime structure allocation disguised as arithmetic. Keywords vanish into a 28 entry perfect hash collision table, resolved via multiplicative hashing and token type enums. Parsing leverages continuation style AST chaining with void star punning and zero initialized sentinels for block termination. Evaluation fuses binary ops into a single switch cascade, with closures via environment cloning and function pointers embedded as tagged nodes. Dense `#define` chains bootstrap the lexer without visible strings, while error paths masquerade as arithmetic exits. The result: a slimy trail of logic that crawls at interpretable speed...
 
 > *I watched a snail crawl along the edge of a straight razor. This is my dream; this is my nightmare. Crawling, slithering, along the edge of a straight razor, and surviving.*
 > 
-> — Colonel Kurtz, *Apocalypse Now*
+> - Colonel Kurtz, *Apocalypse Now*
