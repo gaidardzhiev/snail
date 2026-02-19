@@ -322,6 +322,6 @@ These scripts prove Snail can simulate the core logic patterns of a Turing machi
 
 This entry compresses a full recursive descent parser, AST builder, lexical analyzer with hashed keywords, nested environment scopes, and expression evaluator using layered macro indirection, self referential data encoding, polymorphic operator dispatch, and runtime structure allocation disguised as arithmetic. Keywords vanish into a 28 entry perfect hash collision table, resolved via multiplicative hashing and token type enums. Parsing leverages continuation style AST chaining with void star punning and zero initialized sentinels for block termination. Evaluation fuses binary ops into a single switch cascade, with closures via environment cloning and function pointers embedded as tagged nodes. Dense `#define` chains bootstrap the lexer without visible strings, while error paths masquerade as arithmetic exits. The result: a slimy trail of logic that crawls at interpretable speed...
 
-> *I watched a snail crawl along the edge of a straight razor. This is my dream; this is my nightmare. Crawling, slithering, along the edge of a straight razor, and surviving.*
+> *I watched a snail crawl along the edge of a straight razor. This is my dream; this is my nightmare. Crawling, slithering, along the edge of a straight razor, and surviving...*
 > 
 > - Colonel Kurtz, *Apocalypse Now*
