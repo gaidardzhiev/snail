@@ -1,10 +1,4 @@
-
-
-
 SHELL= bash
-
-
-
 CC= cc
 CHMOD= chmod
 CLANG= clang
@@ -15,55 +9,30 @@ MV= mv
 RM= rm
 RMDIR= rmdir
 TRUE= true
-
-
-
 CSILENCE= -Wno-poison-system-directories -Wno-unsafe-buffer-usage -Wno-overriding-deployment-version -Wno-missing-field-initializers
-
 CUNKNOWN= -Wno-unknown-warning-option
-
 CWARN= -Wall -Wextra -pedantic ${CSILENCE} ${CUNKNOWN}
-
 CSTD= -std=gnu17
-
 ARCH=
-
 CDEFINE=
-
 CINCLUDE=
-
 COTHER=
-
 OPT= -O3
-
 CFLAGS= ${CSTD} ${CWARN} ${ARCH} ${CDEFINE} ${CINCLUDE} ${COTHER} ${OPT}
-
 LDFLAGS=
-
 CC= cc
-
 ifeq "$(findstring $(CLANG),${CC})" "$(CLANG)"
 CSILENCE+=
 CWARN+= -Weverything
 endif
-
 ifeq "$(findstring $(GCC),${CC})" "$(GCC)"
 CSILENCE+=
 CWARN+=
 endif
-
-
-
 PROG= prog
 OBJ= ${PROG}.o
 TARGET= ${PROG}
-
-
 DATA=
-
-
-
-
 all: data ${TARGET}
 	@${TRUE}
 
@@ -72,13 +41,7 @@ all: data ${TARGET}
 ${PROG}: ${PROG}.c
 	${CC} ${CFLAGS} ${PROG}.c -o $@ ${LDFLAGS}
 
-
-
-
-
-	@${TRUE}
-
-
+@${TRUE}
 
 clean:
 	${RM} -f ${OBJ} ${ALT_OBJ}
@@ -88,7 +51,5 @@ clobber: clean
 	@
 	${RM} -f ${TARGET} ${ALT_TARGET}
 	${RM} -rf *.dSYM
-
-
 
 -include 1337.mk ../1337.mk ../../1337.mk
